@@ -1,0 +1,37 @@
+<odoo>
+    <record id="view_mata_pelajaran_tree" model="ir.ui.view">
+        <field name="name">mata_pelajaran.tree</field>
+        <field name="model">school.mata_pelajaran</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="jurusan"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_mata_pelajaran_form" model="ir.ui.view">
+        <field name="name">mata_pelajaran.form</field>
+        <field name="model">school.mata_pelajaran</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="jurusan"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <menuitem id="menu_school_mata_pelajaran" name="Mata Pelajaran" parent="menu_school_root" sequence="3"/>
+
+    <record id="action_mata_pelajaran" model="ir.actions.act_window">
+        <field name="name">Mata Pelajaran</field>
+        <field name="res_model">school.mata_pelajaran</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_action_mata_pelajaran" name="Mata Pelajaran" parent="menu_school_mata_pelajaran" action="action_mata_pelajaran" sequence="1"/>
+</odoo>

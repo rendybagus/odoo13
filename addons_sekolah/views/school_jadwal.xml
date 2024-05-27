@@ -1,0 +1,43 @@
+<odoo>
+    <record id="view_jadwal_tree" model="ir.ui.view">
+        <field name="name">jadwal.tree</field>
+        <field name="model">school.jadwal</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="hari"/>
+                <field name="kelas_id"/>
+                <field name="jam"/>
+                <field name="mata_pelajaran_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_jadwal_form" model="ir.ui.view">
+        <field name="name">jadwal.form</field>
+        <field name="model">school.jadwal</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="hari"/>
+                        <field name="kelas_id"/>
+                        <field name="jam"/>
+                        <field name="mata_pelajaran_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <menuitem id="menu_school_jadwal" name="Jadwal" parent="menu_school_root" sequence="5"/>
+
+    <record id="action_jadwal" model="ir.actions.act_window">
+        <field name="name">Jadwal</field>
+        <field name="res_model">school.jadwal</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_action_jadwal" name="Jadwal" parent="menu_school_jadwal" action="action_jadwal" sequence="1"/>
+</odoo>

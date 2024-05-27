@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_school_guru_user,access_school_guru_user,model_school_guru,base.group_user,1,1,1,1
+access_school_jadwal_user,access_school_jadwal_user,model_school_jadwal,base.group_user,1,1,1,1
+access_school_siswa_user,access_school_siswa_user,model_school_siswa,base.group_user,1,1,1,1
+access_school_kelas_user,access_school_kelas_user,model_school_kelas,base.group_user,1,1,1,1
+access_school_mata_pelajaran_user,access_school_mata_pelajaran_user,model_school_mata_pelajaran,base.group_user,1,1,1,1

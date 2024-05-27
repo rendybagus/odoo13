@@ -1,0 +1,40 @@
+<odoo>
+    <record id="view_kelas_tree" model="ir.ui.view">
+        <field name="name">kelas.tree</field>
+        <field name="model">school.kelas</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="wali_kelas"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_kelas_form" model="ir.ui.view">
+        <field name="name">kelas.form</field>
+        <field name="model">school.kelas</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="wali_kelas"/>
+                    </group>
+                    <group>
+                        <field name="nm_siswa_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <menuitem id="menu_school_kelas" name="Kelas" parent="menu_school_root" sequence="2"/>
+
+    <record id="action_kelas" model="ir.actions.act_window">
+        <field name="name">Kelas</field>
+        <field name="res_model">school.kelas</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_action_kelas" name="Kelas" parent="menu_school_kelas" action="action_kelas" sequence="1"/>
+</odoo>
